@@ -26,8 +26,8 @@ https://www.kaggle.com/abhia1999/chronic-kidney-disease
 ## 8. Diabetes
 https://www.kaggle.com/uciml/pima-indians-diabetes-database
 
-## 9. Ovarian Cancer
-https://www.kaggle.com/saurabhshahane/predict-ovarian-cancer
+## 9. Lung Cancer
+https://www.kaggle.com/mysarahmadbhat/lung-cancer
 
 ## 10. Water Quality Prediction
 https://www.kaggle.com/adityakadiwal/water-potability
