@@ -14,9 +14,8 @@ https://www.kaggle.com/fedesoriano/heart-failure-prediction
 ## 4. Colorectal Cancer
 https://www.kaggle.com/amandam1/colorectal-cancer-patients?select=Colorectal+Cancer+Patient+Data.csv
 
-## 5. Parkinson's Disease
-https://www.kaggle.com/sohelranaccselab/parkinsons-disease-classification
-
+## 5. Thoraric Surgery
+https://www.kaggle.com/sid321axn/thoraric-surgery
 ## 6. Breast Cancer
 https://www.kaggle.com/adhyanmaji31/breast-cancer-prediction
 
