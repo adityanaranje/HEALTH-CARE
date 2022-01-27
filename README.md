@@ -11,8 +11,8 @@ https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
 ## 3. Heart Disease
 https://www.kaggle.com/fedesoriano/heart-failure-prediction
 
-## 4. Thoraric Surgery
-https://www.kaggle.com/sid321axn/thoraric-surgery
+## 4. Colorectal Cancer
+https://www.kaggle.com/amandam1/colorectal-cancer-patients
 
 ## 5. Breast Cancer
 https://www.kaggle.com/adhyanmaji31/breast-cancer-prediction
