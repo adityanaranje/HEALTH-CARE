@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stroke Prediction</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/static/page2.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-hand-holding-water"></i>
+        <h1>Stroke Prediction</h1>
+        <p> A stroke occurs when the blood supply to part of the brain is suddenly interrupted or when a blood vessel in the brain
+            bursts, spilling blood into the spaces surrounding brain cells. Brain cells die when they no longer receive oxygen and
+            nutrients from the blood or there is sudden bleeding into or around the brain. The symptoms of a stroke include sudden
+            numbness or weakness, especially on one side of the body; sudden confusion or trouble speaking or understanding speech;
+            sudden trouble seeing in one or both eyes; sudden trouble with walking, dizziness, or loss of balance or coordination;
+            or sudden severe headache with no known cause. There are two forms of stroke: ischemic - blockage of a blood vessel
+            supplying the brain, and hemorrhagic - bleeding into or around the brain.
+
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.ninds.nih.gov/Disorders/All-Disorders/Stroke-Information-Page">Read More...</a>
+          <a class="btn-item" href="/">Back To Homepage</a>
+        </div>
+      </div>
+
+
+      <form action="/stroke" method="POST">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enter Details</h2>
+        </div>
+        <div class="info">
+
+        <input type="text" name="age" placeholder="Age" required="required">
+
+          <select name="hypertension">
+            <option value="hypertension" selected>Hypertension*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          
+          <select name="heart_disease">
+            <option value="heart_disease" selected>Heart Disease*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <input type="text" name="glucose" placeholder="Glucose Level (50-280 mg/dL)" required="required">
+          <input type="text" name="bmi" placeholder="BMI (10-50)" required="required">
+
+          <select name="Gender">
+            <option value="gender" selected>Gender*</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+          <select name="Married">
+            <option value="married" selected>Married*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="work_type">
+            <option value="work_type" selected>Work Type*</option>
+            <option value="1">Government Job</option>
+            <option value="2">Private</option>
+            <option value="3">Self Employed</option>
+            <option value="4">Children</option>
+          </select>
+          <select name="Residence">
+            <option value="residence" selected>Residence*</option>
+            <option value="1">Urban</option>
+            <option value="0">Rural</option>
+          </select>
+
+          <select name="Smoking">
+            <option value="smoking" selected>Smoking*</option>
+            <option value="3">Smokes</option>
+            <option value="1">Formally</option>
+            <option value="2">Never</option>
+          </select>
+          
+        </div>
+
+        <div>
+            {% if prediction==1 %}
+            <h2 style="color:rgb(255, 47, 47)">Chance of Stroke</h2>
+            {% endif %}
+            
+            {% if prediction==0 %}
+            <h2 style="color: rgb(103, 255, 14);">No Chance of Stroke</h2>
+            {% endif %}
+
+            {% if prediction==-1 %}
+            <h2 style="color:rgb(247, 243, 19);">Invalid Data Entered. Please Enter Numeric Data</h2>
+            {% endif %}
+          </div>
+
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

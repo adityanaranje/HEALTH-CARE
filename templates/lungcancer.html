@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lung Cancer Prediction</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/static/page8.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-hand-holding-water"></i>
+        <h1>Lung Cancer Prediction</h1>
+        <p> Lung cancer is a type of cancer that starts in the lungs. Cancer starts when cells in the body begin to grow out of
+            control.
+            Your lungs are 2 sponge-like organs in your chest. Your right lung has 3 sections, called lobes. Your left lung has 2
+            lobes. The left lung is smaller because the heart takes up more room on that side of the body.
+            
+            When you breathe in, air enters through your mouth or nose and goes into your lungs through the trachea (windpipe). The
+            trachea divides into tubes called bronchi, which enter the lungs and divide into smaller bronchi. These divide to form
+            smaller branches called bronchioles. At the end of the bronchioles are tiny air sacs known as alveoli....
+
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.cancer.org/cancer/lung-cancer/about/what-is.html">Read More...</a>
+          <a class="btn-item" href="/">Back To Homepage</a>
+        </div>
+      </div>
+
+
+      <form action="/lungcancer" method="POST">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enter Details</h2>
+        </div>
+        <div class="info">
+          <select name="gender">
+            <option value="Gender" selected>Gender*</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+          <input type="text" name="age" placeholder="Age" required="required">
+          <select name="smoking">
+            <option value="smoking" selected>Smoking*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="yellow_fingers">
+            <option value="yellow_fingers" selected>Yellow Fingers*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="anxiety">
+            <option value="anxiety" selected>Anxiety*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="peer_pressure">
+            <option value="peer_pressure" selected>Peer Pressure*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="chronic_disease">
+            <option value="chronic_disease" selected>Chronic Disease*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="fatigue">
+            <option value="fatigue" selected>Fatigue*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="allergy">
+            <option value="allergy" selected>Allergy*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="weezing">
+            <option value="weezing" selected>Weezing*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="alcohol">
+            <option value="alcohol" selected>Alcohol*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="coughing">
+            <option value="coughing" selected>Coughing*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="short_breadth">
+            <option value="short_breadth" selected>Short Breadth*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+
+          <select name="swallowing_difficulty">
+            <option value="swallowing_difficulty" selected>Swallowing Difficulty*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          <select name="chest_pain">
+            <option value="chest_pain" selected>Chest Pain*</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+          
+        </div>
+
+        <div>
+            {% if prediction==1 %}
+            <h2 style="color:rgb(82, 255, 47)">Chance of Lung Cancer</h2>
+            {% endif %}
+            
+            {% if prediction==0 %}
+            <h2 style="color: rgb(229, 255, 0);">No Chance of Lung Cancer</h2>
+            {% endif %}
+
+            {% if prediction==-1 %}
+            <h2 style="color:rgb(247, 53, 19);">Invalid Data Entered. Please Enter Numeric Data</h2>
+            {% endif %}
+          </div>
+
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/static/page3.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-hand-holding-water"></i>
+        <h1>Heart Disease Prediction</h1>
+        <p> The term “heart disease” refers to several types of heart conditions. 
+            The most common type of heart disease in the United States is coronary
+             artery disease (CAD), which affects the blood flow to the heart. Decreased 
+             blood flow can cause a heart attack. Sometimes heart disease may be 
+             “silent” and not diagnosed until a person experiences signs or symptoms of 
+             a heart attack, heart failure, 
+        </p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.cdc.gov/heartdisease/about.htm">Read More...</a>
+          <a class="btn-item" href="/">Back To Homepage</a>
+        </div>
+      </div>
+
+
+      <form action="/heartdisease" method="POST">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enter Details</h2>
+        </div>
+        <div class="info">
+            <input type="text" name="age" placeholder="Age" required="required">
+
+           <select name="Gender">
+            <option value="Gender" selected>Gender*</option> 
+             <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+          <select name="chestpain">
+            <option value="chestpain" selected>Chest Pain Type*</option> 
+             <option value="4">Typical Angina</option>
+            <option value="1">Atypical Angina</option>
+            <option value="2">Non-Anginal Angina</option>
+            <option value="3">Asymptomatic</option>
+        </select>
+
+          <input type="text" name="RestingBP" placeholder="Resting Blood Pressure" required="required">
+
+          <input type="text" name="cholesterol" placeholder="Cholesterol" required="required">
+
+          <select name="fastingbs">
+            <option value="fastingbs" selected>Fasting Blood Sugar*</option> 
+             <option value="1"> greater than 120</option>
+            <option value="0">  less than 120 </option>
+        </select>
+
+          <select name="restingecg">
+            <option value="restingecg" selected>Resting ECG*</option> 
+             <option value="0">Normal</option>
+            <option value="1">ST-T wave abnormality</option>
+            <option value="2">Left Ventricular Hypertrophy</option>
+        </select>
+
+          <input type="text" name="MaxHR" placeholder="Maximum Heart Rate (60-202)" required="required">
+
+          <select name="exercise-angina">
+            <option value="exercise-angina" selected>Exercise Induced Angina*</option> 
+             <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+          <input type="text" name="oldpeak" placeholder="Old Peak" required="required">
+
+          <select name="st-slope">
+            <option value="st_slope" selected>Slope of Peak Exercise ST segment*</option> 
+             <option value="2">Upsloping</option>
+            <option value="1">Flat</option>
+             <option value="0">Downsloping</option>
+        </select>
+         
+          
+        </div>
+
+        <div>
+            {% if prediction==0 %}
+            <h2 style="color:rgb(82, 255, 47)">No Chance Of Disease</h2>
+            {% endif %}
+            
+            {% if prediction==1 %}
+            <h2 style="color: rgb(229, 255, 0);">Chance Of Disease</h2>
+            {% endif %}
+
+            {% if prediction==-1 %}
+            <h2 style="color:rgb(247, 53, 19);">Invalid Data Entered. Please Enter Numeric Data</h2>
+            {% endif %}
+          </div>
+
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

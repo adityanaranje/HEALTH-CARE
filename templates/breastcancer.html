@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/static/page5.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-hand-holding-water"></i>
+        <h1>Breast Cancer Prediction</h1>
+        <p> Breast cancer is cancer that forms in the cells of the breasts.
+            After skin cancer, breast cancer is the most common cancer diagnosed 
+            in women in the United States. Breast cancer can occur in both men 
+            and women, but it's far more common in women. Substantial support 
+            for breast cancer awareness and research funding has helped created 
+            advances in the diagnosis and treatment of breast cancer.
+        </p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.mayoclinic.org/diseases-conditions/breast-cancer/symptoms-causes/syc-20352470">Read More...</a>
+          <a class="btn-item" href="/">Back To Homepage</a>
+        </div>
+      </div>
+
+
+      <form action="/breastcancer" method="POST">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enter Details</h2>
+        </div>
+        <div class="info">
+           <select name="clump_thickness">
+            <option value="clump_thickness" selected>Clump Thickness*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="uniformity_of_cell_size">
+            <option value="uniformity_of_cell_size" selected>Uniformity Of Cell Size*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="uniformity_of_cell_shape">
+            <option value="uniformity_of_cell_shape" selected>Uniformity Of Cell Shape*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+
+          <select name="marginal_adhesion">
+            <option value="marginal_adhesion" selected>Marginal Adnesion*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="single_epithelial_cell_size">
+            <option value="single_epithelial_cell_size" selected>Single Epithelial Cell Size*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="bare_nuclei">
+            <option value="bare_nuclei" selected>Bare Nuclei*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+
+          <select name="bland_chromatin">
+            <option value="bland_chromatin" selected>Bland Chromatin*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="normal_nucleoli">
+            <option value="normal_nucleoli" selected>Normal Nucleoli*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          <select name="mitosis">
+            <option value="mitosis" selected>Mitosis*</option>
+            {% for i in lst %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}   
+          </select>
+          
+        </div>
+
+        <div>
+            {% if prediction==2 %}
+            <h2 style="color:rgb(82, 255, 47)">Benign Cancer</h2>
+            {% endif %}
+            
+            {% if prediction==4 %}
+            <h2 style="color: rgb(229, 255, 0);">Malignant Cancer</h2>
+            {% endif %}
+
+            {% if prediction==-1 %}
+            <h2 style="color:rgb(247, 53, 19);">Invalid Data Entered. Please Enter Numeric Data</h2>
+            {% endif %}
+          </div>
+
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

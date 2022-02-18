@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(page7.jpg) no-repeat center center fixed;
+        background-size:cover;
+}
+
+.container{
+    color:white;
+    width: 25%;
+    position: absolute;
+    top:23%;
+    left:40%;
+}
+ 
+
+.container h1{
+    width: 100%;
+    font-size: 40px;
+    border-bottom: 5px solid rgb(247, 58, 237);
+    margin-bottom:20px;
+    padding: 12px 0;
+    display: inline-block;
+}
+
+.box{
+    width: 100%;
+    border-bottom: 2px solid rgb(90, 0, 112);
+    margin: 22px 0;
+}
+
+.box input{
+    background: none;
+    width: 70%;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size:20px;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.box select{
+    color: rgb(255, 255, 255);
+    background: none;
+    width: 50%;
+    outline: rgb(255, 255, 255);
+}
+.box option{
+    background:rgb(255, 255, 255);
+}
+.box optgroup{
+    background: rgb(255, 255, 255);
+}
+
+.btn{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin: 10px 5px;
+    padding: 10px 21px;
+    border-radius: 10px;
+    border: 2px solid rgb(211, 0, 200);
+    background: none;
+    color: rgb(255, 255, 255);
+}
+.container a{
+    color:rgb(239, 255, 16);
+    margin: 10px ;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    color: rgb(104, 0, 99);
+    background:rgb(255, 255, 255);
+    opacity: 90%;
+}
+
+::placeholder{
+    color:rgb(255, 255, 255);
+}

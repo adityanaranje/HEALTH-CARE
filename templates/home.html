@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/433888fe69.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>Home Page</title>
+  </head>
+
+  <style>
+    .card-head {
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+    }
+
+    .card-head1 {
+      font-weight: bold;
+      font-family: cursive;
+      font-size: 20px;
+    }
+  </style>
+
+  <body>
+    <!--header-->
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">
+                This is a web application which is based on prediction of various 
+                diseases using different machine learning classifications algorithms.
+                The goal behind this application is to implement the concepts which we
+                are learning in machine learning. Hope you will like this.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://github.com/adityanaranje" class="text-white"
+                    >Github Aditya Naranje</a
+                  >
+                </li>
+                <li>
+                  <a href="https://github.com/Swaraj007" class="text-white"
+                    >Github Swaraj Sawarkar</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:aditya.naranje7@gmail.com" class="text-white"
+                    >Email Aditya Naranje</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:swarajsawarkar16@gmail.com" class="text-white"
+                    >Email Swaraj Sawarkar</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <i class="fas fa-heartbeat"></i>
+            <strong> HEALTH CARE PREDICTION WEB APP</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--carousel images-->
+    <div class="container-fluid px-5 py-5">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="static/start1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+            <h1>{{val1}}</h1> 
+          </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="static/start2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+            <h1>{{val2}}</h1>
+          </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="static/start3.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+            <h1 >{{val3}}</h1>
+          </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <center>
+      <h1>Start Predicting</h1>
+    </center>
+
+    <!--cards-->
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <!--1st row-->
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img1.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Cirrhosis</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/cirrhosis"
+                      class="btn btn-lg btn-outline-danger"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img2.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Stroke</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/stroke"
+                      class="btn btn-lg btn-outline-info"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img3.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Heart Disease</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/heartdisease"
+                      class="btn btn-lg btn-outline-success"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--2nd row-->
+          
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img6.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Breast Cancer</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/breastcancer"
+                      class="btn btn-lg btn-outline-info"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img7.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Chronic Kidney Disease</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/chronickidneydisease"
+                      class="btn btn-lg btn-outline-success"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--3rd row-->
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img8.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Diabetes</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/diabetes"
+                      class="btn btn-lg btn-outline-danger"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img9.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Lung Cancer</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/lungcancer"
+                      class="btn btn-lg btn-outline-info"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/img10.jpg" />
+
+              <div class="card-body">
+                <p class="card-text card-head">Water Quality Prediction</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a
+                      type="button"
+                      href="/waterpotability"
+                      class="btn btn-lg btn-outline-success"
+                      >View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <h1>CONTRIBUTORS</h1>
+    </center>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 px-4 mx-4">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/avtar1.jpg" />
+
+              <div class="card-body">
+                <center>
+                  <p class="card-text card-head">Swaraj Sawarkar (IT)</p>
+                  <p class="card-text card-head1">
+                    Prof Ram Meghe Institute of Technology And Research, Badnera
+                  </p>
+                  <a
+                    type="button"
+                    href="https://www.linkedin.com/in/swaraj-s-4b67b3108"
+                    class="btn btn-lg btn-outline-warning"
+                    >View</a
+                  >
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="static/avtar2.jpg" />
+
+              <div class="card-body">
+                <center>
+                  <p class="card-text card-head">Aditya Naranje (CSE)</p>
+                  <p class="card-text card-head1">
+                    Prof Ram Meghe Institute of Technology And Research, Badnera
+                  </p>
+                  <a
+                    type="button"
+                    href="https://www.linkedin.com/in/anaranje/"
+                    class="btn btn-lg btn-outline-warning"
+                    >View</a
+                  >
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
