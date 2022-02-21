@@ -11,20 +11,21 @@ https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
 ## 3. Heart Disease
 https://www.kaggle.com/fedesoriano/heart-failure-prediction
 
-## 4. Colorectal Cancer
-https://www.kaggle.com/amandam1/colorectal-cancer-patients
-
-## 5. Breast Cancer
+## 4. Breast Cancer
 https://www.kaggle.com/adhyanmaji31/breast-cancer-prediction
 
-## 6. Chronic Kidney Disease
+## 5. Chronic Kidney Disease
 https://www.kaggle.com/abhia1999/chronic-kidney-disease
 
-## 7. Diabetes
+## 6. Diabetes
 https://www.kaggle.com/uciml/pima-indians-diabetes-database
 
-## 8. Lung Cancer
+## 7. Lung Cancer
 https://www.kaggle.com/mysarahmadbhat/lung-cancer
 
-## 9. Water Quality Prediction
+## 8. Water Quality Prediction
 https://www.kaggle.com/adityakadiwal/water-potability
+
+
+App link
+https://health-care-predictor-sa.herokuapp.com/
